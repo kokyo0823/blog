@@ -1,0 +1,28 @@
+.single {
+  width: 1000px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+.single_topArea .up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 3px solid black;
+  padding: 12px;
+}
+
+.single_topArea .up .up_day {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.single_topArea .up .up_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style_single.css.map */
