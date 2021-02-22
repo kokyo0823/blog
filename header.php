@@ -20,7 +20,7 @@
     <div class="header_menu">
       <ul>
         <li class="header_menu_item"><a href="#">クオラフについて</a></li>
-        <li class="header_menu_item"><a href="#">ポートフォリオ</a></li>
+        <li class="header_menu_item"><a href="#">投稿一覧</a></li>
         <li class="header_menu_item"><a href="#">お問い合わせ</a></li>
       </ul>
     </div>

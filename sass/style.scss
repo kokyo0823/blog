@@ -21,7 +21,6 @@ html {
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 300;
-  background-color: #f3f3f3;
   width: 100%;
   a {
     text-decoration: none;
@@ -146,11 +145,13 @@ main {
     &_list {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       width: 950px;
       margin: 0 auto;
       .item {
         position: relative;
         width: 300px;
+        margin-bottom: 30px;
         &_img {
           width: 300px;
         }
@@ -323,4 +324,37 @@ main {
       margin-top: 20px;
     }
   }
+}
+
+/*wp-pagenavi base*/
+.wp-pagenavi {
+  clear: both;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.wp-pagenavi a,
+.wp-pagenavi span {
+  color: #999;
+  background-color: #fff;
+  border: solid 1px #e0e0d2;
+  padding: 8px 15px;
+  margin: 0 2px;
+  white-space: nowrap;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+}
+.wp-pagenavi a:hover {
+  color: #fff;
+  background-color: #999;
+  border-color: #999;
+}
+.wp-pagenavi span.current {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+  font-weight: bold;
 }

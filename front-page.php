@@ -1,5 +1,6 @@
 <?php get_header(); ?>
     <!-- ABOUT ME -->
+    <div class="background" style="background-color: #f3f3f3">
     <div class="about">
       <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/bg_about.jpg" alt="about me"></a>
       <h2 class="about_text">ABOUT ME</h2>
@@ -99,5 +100,6 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   <?php get_footer(); ?>

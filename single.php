@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <img class="thumbnail" src="/img/top.jpg" alt="">
+    <img class="thumbnail" src="<?php echo get_template_directory_uri(); ?>/img/top.jpg" alt="">
 
     <div class="single_content">
       <p>日々の暮らしの中、僕はいつどんな時に音楽を聴いているだろうと、ふと考えてみる。</p>
@@ -26,7 +26,7 @@
       <p>日々の暮らしの中、僕はいつどんな時に音楽を聴いているだろうと、ふと考えてみる。</p>
       <p>日々の暮らしの中、僕はいつどんな時に音楽を聴いているだろうと、ふと考えてみる。</p>
       <h2>持ち運べるライブハウス「Bower＆Wilkins PX7」</h2>
-      <img src="/img/bg_about.jpg" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/bg_about.jpg" alt="">
       <p>日々の暮らしの中、僕はいつどんな時に音楽を聴いているだろうと、ふと考えてみる。</p>
       <p>日々の暮らしの中、僕はいつどんな時に音楽を聴いているだろうと、ふと考えてみる。</p>
       <h3>日々の暮らし</h3>
