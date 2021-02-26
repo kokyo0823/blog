@@ -19,4 +19,7 @@
 	}
 	add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
 
+	//　アイキャッチ画像の設定
+	add_theme_support('post-thumbnails');
+
 	?>

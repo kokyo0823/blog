@@ -24,6 +24,7 @@ body a {
   position: fixed;
   z-index: 9999;
   padding: 30px 25px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .header_title {
@@ -61,12 +62,16 @@ main .topImg {
   background-image: url("../img/top.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: right bottom;
+  background-position: center;
 }
 
 @media screen and (max-width: 767px) {
   main .topImg {
     height: 80vh;
+    width: 100%;
+    background-image: url("../img/top_sp.jpg");
+    background-size: contain;
+    background-position: top;
   }
 }
 
@@ -100,6 +105,9 @@ main .about_text {
 }
 
 @media screen and (max-width: 767px) {
+  main .about {
+    padding: 40px 0;
+  }
   main .about_text {
     font-size: 4vw;
   }
@@ -160,9 +168,12 @@ main .popular_list .item {
   margin-bottom: 30px;
 }
 
-main .news_list .item_img,
-main .popular_list .item_img {
+main .news_list .item img,
+main .popular_list .item img {
   width: 300px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main .news_list .item_genre,
@@ -192,6 +203,7 @@ main .popular_list .item_title {
 
 main .news .p,
 main .popular .p {
+  display: block;
   text-align: center;
   border-top: 2px solid;
   border-bottom: 2px solid;
@@ -202,6 +214,14 @@ main .popular .p {
 }
 
 @media screen and (max-width: 767px) {
+  main .news,
+  main .popular {
+    padding: 30px 20px;
+  }
+  main .news_title,
+  main .popular_title {
+    margin-bottom: 40px;
+  }
   main .news_list,
   main .popular_list {
     display: inline-block;
@@ -212,9 +232,13 @@ main .popular .p {
     width: 100%;
     margin-bottom: 40px;
   }
-  main .news_list .item_img,
-  main .popular_list .item_img {
+  main .news_list .item img,
+  main .popular_list .item img {
     width: 100%;
+  }
+  main .news .p,
+  main .popular .p {
+    margin: 30px auto 30px auto;
   }
 }
 
@@ -289,6 +313,12 @@ main .category_list .item_genre_en {
 }
 
 @media screen and (max-width: 767px) {
+  main .category {
+    padding: 30px 20px;
+  }
+  main .category_title {
+    margin-bottom: 40px;
+  }
   main .category_list {
     display: inline-block;
     width: 100%;

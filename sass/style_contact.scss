@@ -1,0 +1,24 @@
+// レイアウト幅
+$layout-width-inner: 1000px;
+
+// ブレークポイント
+$breakpoints: (
+  "sp": "screen and (max-width: 767px)",
+  "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "pc": "screen and (min-width: #{$layout-width-inner})",
+);
+
+// メディアクエリ
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.wpcf7-form {
+  margin: 60px auto;
+  display: block;
+  width: 500px;
+  padding: 30px 50px;
+  background-color: rgba(234, 234, 234, 0.7);
+}

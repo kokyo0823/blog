@@ -11,17 +11,18 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style_single.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style_contact.css">
 
   <?php wp_head();?>
 </head>
 <body>
   <header class="header">
-    <a href="#"><h1 class="header_title">クオラフ</h1></a>
+    <a href="<?php echo home_url() ?>"><h1 class="header_title">クオラフ</h1></a>
     <div class="header_menu">
       <ul>
-        <li class="header_menu_item"><a href="#">クオラフについて</a></li>
-        <li class="header_menu_item"><a href="#">投稿一覧</a></li>
-        <li class="header_menu_item"><a href="#">お問い合わせ</a></li>
+        <li class="header_menu_item"><a href="<?php echo get_template_directory_uri(); ?>/about/">クオラフについて</a></li>
+        <li class="header_menu_item"><a href="<?php echo get_template_directory_uri(); ?>/blog/">投稿一覧</a></li>
+        <li class="header_menu_item"><a href="<?php echo get_template_directory_uri(); ?>/contact/">お問い合わせ</a></li>
       </ul>
     </div>
     <div class="header_serch">
