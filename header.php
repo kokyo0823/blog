@@ -20,14 +20,14 @@
     <a href="<?php echo home_url() ?>"><h1 class="header_title">クオラフ</h1></a>
     <div class="header_menu">
       <ul>
-        <li class="header_menu_item"><a href="<?php echo get_template_directory_uri(); ?>/about/">クオラフについて</a></li>
-        <li class="header_menu_item"><a href="<?php echo get_template_directory_uri(); ?>/blog/">投稿一覧</a></li>
-        <li class="header_menu_item"><a href="<?php echo get_template_directory_uri(); ?>/contact/">お問い合わせ</a></li>
+        <li class="header_menu_item op"><a href="<?php echo get_template_directory_uri(); ?>/about/">クオラフについて</a></li>
+        <li class="header_menu_item op"><a href="<?php echo get_template_directory_uri(); ?>/blog/">投稿一覧</a></li>
+        <li class="header_menu_item op"><a href="<?php echo get_template_directory_uri(); ?>/contact/">お問い合わせ</a></li>
       </ul>
     </div>
-    <div class="header_serch">
+    <!-- <div class="header_serch">
       <i class="fas fa-search fa-lg"></i>
-    </div>
+    </div> -->
   </header>
   <main>
     <div class="topImg"></div>

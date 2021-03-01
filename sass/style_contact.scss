@@ -21,4 +21,15 @@ $breakpoints: (
   width: 500px;
   padding: 30px 50px;
   background-color: rgba(234, 234, 234, 0.7);
+  input,
+  textarea {
+    width: 100%;
+    border: none;
+  }
+  .wpcf7-submit {
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+  }
 }

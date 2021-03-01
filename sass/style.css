@@ -13,6 +13,26 @@ body a {
   color: black;
 }
 
+body .hv:hover {
+  opacity: 0.8;
+  -webkit-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body .hv-l:hover {
+  opacity: 0.8;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body .op:hover {
+  opacity: 0.8;
+}
+
 .header {
   width: 100%;
   display: -webkit-box;
@@ -57,21 +77,26 @@ body a {
 }
 
 main .topImg {
-  width: 100%;
-  height: 35vw;
-  background-image: url("../img/top.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  height: 70vh;
 }
 
-@media screen and (max-width: 767px) {
+main .topImg:before {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/top.jpg");
+  display: inline-block;
+  position: fixed;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  content: "";
+}
+
+@media screen and (max-width: 999px) and (min-width: 768px) {
   main .topImg {
     height: 80vh;
     width: 100%;
-    background-image: url("../img/top_sp.jpg");
-    background-size: contain;
-    background-position: top;
   }
 }
 
@@ -88,12 +113,9 @@ main .about a img {
 }
 
 main .about a img:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
   opacity: 0.8;
-  border-radius: 100px;
-  -webkit-box-shadow: 0 2px 5px black;
-          box-shadow: 0 2px 5px black;
 }
 
 main .about_text {
@@ -110,6 +132,7 @@ main .about_text {
   }
   main .about_text {
     font-size: 4vw;
+    top: 125px;
   }
   main .about a img:hover {
     -webkit-transform: scale(0.9, 0.9);
@@ -229,7 +252,8 @@ main .popular .p {
   }
   main .news_list .item,
   main .popular_list .item {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     margin-bottom: 40px;
   }
   main .news_list .item img,
@@ -239,6 +263,23 @@ main .popular .p {
   main .news .p,
   main .popular .p {
     margin: 30px auto 30px auto;
+  }
+}
+
+@media screen and (max-width: 999px) and (min-width: 768px) {
+  main .news_list,
+  main .populer_list {
+    width: 100%;
+  }
+  main .news_list .item,
+  main .populer_list .item {
+    width: 30%;
+  }
+  main .news_list .item a img,
+  main .populer_list .item a img {
+    height: 17vw;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -328,6 +369,18 @@ main .category_list .item_genre_en {
   }
   main .category_list .item_genre {
     top: 16vw;
+  }
+}
+
+@media screen and (max-width: 999px) and (min-width: 768px) {
+  main .category_list {
+    width: 100%;
+  }
+  main .category_list .item {
+    width: 48%;
+  }
+  main .category_list .item_img {
+    width: 100%;
   }
 }
 

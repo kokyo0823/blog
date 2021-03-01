@@ -5,4 +5,17 @@
   padding: 30px 50px;
   background-color: rgba(234, 234, 234, 0.7);
 }
+
+.wpcf7-form input,
+.wpcf7-form textarea {
+  width: 100%;
+  border: none;
+}
+
+.wpcf7-form .wpcf7-submit {
+  width: 80px;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+}
 /*# sourceMappingURL=style_contact.css.map */

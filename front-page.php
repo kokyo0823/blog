@@ -28,7 +28,7 @@
           while ($the_query->have_posts()) : $the_query->the_post();
       ?>
 
-        <div class="item">
+        <div class="item hv">
           <a href="<?php the_permalink(); ?>">
           <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail(); ?>
@@ -49,7 +49,7 @@
         ?>
 
       </div>
-      <a class="p" href="<?php the_permalink(); ?>/blog/">More</a>
+      <a class="p hv-l" href="<?php the_permalink(); ?>/blog/">More</a>
     </div>
 
     <!-- 人気の記事 -->
@@ -88,20 +88,24 @@
         <p class="category_title_en">CATEGORY</p>
       </div>
       <div class="category_list">
-        <div class="item">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/cate.jpg" alt="アイキャッチ画像" class="item_img">
-          <div class="item_genre">
-            <p class="item_genre_ja">日常の不思議</p>
-            <p class="item_genre_en">STRANGE</p>
-          </div>
+        <div class="item hv">
+          <a href="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/cate.jpg" alt="アイキャッチ画像" class="item_img">
+            <div class="item_genre">
+              <p class="item_genre_ja">日常のコラム</p>
+              <p class="item_genre_en">COLUMUN</p>
+            </div>
+          </a>
         </div>
-        <a class="item" href="#">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/cate.jpg" alt="アイキャッチ画像" class="item_img">
-          <div class="item_genre">
-            <p class="item_genre_ja">日常のコラム</p>
-            <p class="item_genre_en">COLUMUN</p>
-          </div>
-        </a>
+        <div class="item hv" href="#">
+          <a href="<?php echo get_template_directory_uri(); ?>/category-self/">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/cate.jpg" alt="アイキャッチ画像" class="item_img">
+            <div class="item_genre">
+              <p class="item_genre_ja">自己分析</p>
+              <p class="item_genre_en">SELF</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
     </div>

@@ -4,7 +4,8 @@ $layout-width-inner: 1000px;
 // ブレークポイント
 $breakpoints: (
   "sp": "screen and (max-width: 767px)",
-  "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "tab":
+    "screen and (max-width: #{$layout-width-inner - 1px}) and (min-width: 768px)",
   "pc": "screen and (min-width: #{$layout-width-inner})",
 );
 
@@ -25,6 +26,19 @@ body {
   a {
     text-decoration: none;
     color: black;
+  }
+  .hv:hover {
+    opacity: 0.8;
+    transform: scale(1.03, 1.03);
+    transition: all 0.3s;
+  }
+  .hv-l:hover {
+    opacity: 0.8;
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s;
+  }
+  .op:hover {
+    opacity: 0.8;
   }
 }
 
@@ -70,20 +84,40 @@ body {
 main {
   //　トップ背景画像
   .topImg {
-    width: 100%;
-    height: 35vw;
-    background-image: url("../img/top.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    height: 70vh;
   }
-  @include mq("sp") {
+  .topImg:before {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/top.jpg");
+
+    display: inline-block;
+    position: fixed;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: "";
+  }
+  // @include mq("sp") {
+  //   .topImg {
+  //     width: 0;
+  //     height: 0;
+  //   }
+  //   .topImg::before {
+  //     width: 100%;
+  //     height: 35vw;
+  //     background-image: url("../img/top_sp.jpg");
+  //     background-repeat: no-repeat;
+  //     background-attachment: fixed;
+  //     background-position: center;
+  //     background-size: cover;
+  //   }
+  // }
+  @include mq("tab") {
     .topImg {
       height: 80vh;
       width: 100%;
-      background-image: url("../img/top_sp.jpg");
-      background-size: contain;
-      background-position: top;
     }
   }
 
@@ -98,10 +132,8 @@ main {
         transition: all 0.3s;
       }
       img:hover {
-        transform: scale(1.1, 1.1);
+        transform: scale(1.05, 1.05);
         opacity: 0.8;
-        border-radius: 100px;
-        box-shadow: 0 2px 5px black;
       }
     }
     &_text {
@@ -117,6 +149,7 @@ main {
       padding: 40px 0;
       &_text {
         font-size: 4vw;
+        top: 125px;
       }
       a {
         img:hover {
@@ -207,7 +240,8 @@ main {
         display: inline-block;
         width: 100%;
         .item {
-          width: 100%;
+          width: 90%;
+          margin: 0 auto;
           margin-bottom: 40px;
           img {
             width: 100%;
@@ -216,6 +250,23 @@ main {
       }
       .p {
         margin: 30px auto 30px auto;
+      }
+    }
+  }
+  @include mq("tab") {
+    .news,
+    .populer {
+      &_list {
+        width: 100%;
+        .item {
+          width: 30%;
+          a {
+            img {
+              height: 17vw;
+              object-fit: cover;
+            }
+          }
+        }
       }
     }
   }
@@ -293,6 +344,19 @@ main {
           }
           &_genre {
             top: 16vw;
+          }
+        }
+      }
+    }
+  }
+  @include mq("tab") {
+    .category {
+      &_list {
+        width: 100%;
+        .item {
+          width: 48%;
+          &_img {
+            width: 100%;
           }
         }
       }
